@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  //position: absolute;
   justify-content: center;
   align-items: center;
   perspective: 100vw;
@@ -30,7 +29,7 @@ export const CardBox = styled.div`
   transition: transform 0.6s;
   transform-style: preserve-3d;
   transform: ${({ front }) => {
-    console.log({ front });
+    //console.log({ front });
     return front ? "rotateY(0deg)" : "rotateY(180deg)";
   }};
 `;
@@ -81,23 +80,23 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   grid-area: content;
   box-sizing: border-box;
   margin: 0;
-  padding: 2vmin;
-  height: 100%;
+  padding: 20px;
   :before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(images/pasta.jpg) no-repeat center center;
+    background: url(images/pasta.jpg);
     background-size: cover;
     z-index: -1;
     left: 0;
     top: 0;
     opacity: 0.15;
-    //font-family: "Neucha", Arial, Helvetica, sans-serif;
+    pointer-events: none;
   }
 `;
 export const Header = styled.h1`
@@ -260,8 +259,8 @@ export const ListIcon = styled.div`
 export const IngredientsSubs = styled.div`
   display: flex;
   align-items: center;
-  height: 30px;
-  padding-left: 10px;
+  width: 100%;
+  padding: 5px;
   font-weight: 500;
   background: linear-gradient(90deg, #ffffff80, transparent);
   span {
@@ -289,6 +288,12 @@ export const ProcessList = styled.div`
 `;
 export const Num = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 25px;
+  border-radius: 2px;
+  background: #cf3f3f;
   margin-right: 10px;
 `;
 export const Appetito = styled.div`
