@@ -9,8 +9,7 @@ body {
   overflow: hidden;
   background-image: url("https://bit.ly/3iLwM81");
   background-position: 80% 40%;
-  /*filter: blur(5px);*/
-  /*opacity: 0.45;*/
+  backdrop-filter: blur(10px);
   font-family: "Neucha", Arial, Helvetica, sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
