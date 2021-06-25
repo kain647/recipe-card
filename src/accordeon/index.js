@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiPlusSquare } from "react-icons/fi";
+import { FiPlusSquare, FiMinusSquare } from "react-icons/fi";
 import {
   Container,
   Block,
@@ -10,8 +10,7 @@ import {
 } from "./styled";
 
 const Expandable = (props) => {
-  const { content, preview, isExpanded } = props;
-  const [expanded, toggle] = useState(isExpanded);
+  const { content, preview, toggle, expanded } = props;
   return (
     <Block>
       <BlockControl onClick={() => toggle(!expanded)}>{preview}</BlockControl>
@@ -21,13 +20,18 @@ const Expandable = (props) => {
 };
 
 const Accord = () => {
+  const [expanded, toggle] = useState(false);
+  const icon = !expanded ? <FiPlusSquare /> : <FiMinusSquare />;
   return (
     <Container>
       <Expandable
+        icon={icon}
+        toggle={toggle}
+        expanded={expanded}
         preview={
           <BlockControl>
             <p>While the pasta cooks, make the pesto.</p>
-            <FiPlusSquare />
+            {icon}
           </BlockControl>
         }
         content={[
@@ -69,7 +73,5 @@ const Accord = () => {
     </Container>
   );
 };
-
-// что делаем? :)звоню почему не разворачивается в месте а вылетает
 
 export default Accord;
