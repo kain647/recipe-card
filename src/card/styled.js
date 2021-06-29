@@ -67,13 +67,13 @@ export const Photo = styled.div`
     img {
       margin-left: -80%;
       transform: scale(1);
-      height: 140%;
+      height: 100%;
     }
   }
   img {
-    margin-left: -150%;
+    margin-left: -100%;
     transform: scale(1.2);
-    height: 250%;
+    height: 130%;
   }
 `;
 export const Content = styled.div`
