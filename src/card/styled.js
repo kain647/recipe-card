@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   perspective: 100vw;
   transition: all 0.75s ease 0s;
-  width: 80vw;
+  width: 65vw;
   height: 80vh;
 `;
 
